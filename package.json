@@ -4,7 +4,7 @@
     "description": "Belajar TypeScript Dasar",
     "main": "index.js",
     "scripts": {
-        "test": "jest"
+        "test": "jest --detectOpenHandles"
     },
     "jest": {
         "transform": {
