@@ -3,7 +3,7 @@ import { Category, Product } from '../src/type-alias';
 describe('Type Alias', () => {
     it('should support in typescript', () => {
         const category: Category = {
-            id: '1',
+            id: 1,
             name: 'Handphone',
         };
 
