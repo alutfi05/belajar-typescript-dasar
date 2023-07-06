@@ -15,4 +15,19 @@ describe('Array', () => {
 
         // hobbies[0] = 'Main game'; // error
     });
+
+    it('should support tuple', () => {
+        const person: readonly [string, string, number] = [
+            'Ahmad',
+            'Lutfi',
+            22,
+        ];
+        console.info(person);
+
+        console.info(person[0]);
+        console.info(person[1]);
+        console.info(person[2]);
+
+        // person[0] = 'ucok'; // error
+    });
 });
