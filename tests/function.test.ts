@@ -77,5 +77,9 @@ describe('Function', () => {
         };
 
         expect(sayHello('lutfi', toUpper)).toBe('Hello LUTFI');
+
+        expect(
+            sayHello('lutfi', (name: string): string => name.toUpperCase())
+        ).toBe('Hello LUTFI');
     });
 });
