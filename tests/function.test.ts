@@ -35,4 +35,17 @@ describe('Function', () => {
 
         expect(sum(1, 2, 3, 4, 5)).toBe(15);
     });
+
+    it('should support optional parameter', () => {
+        const sayHello = (firstName: string, lastName?: string): string => {
+            if (lastName) {
+                return `Hello ${firstName} ${lastName}`;
+            }
+
+            return `Hello ${firstName}`;
+        };
+
+        expect(sayHello('Lutfi')).toBe('Hello Lutfi');
+        expect(sayHello('Ahmad', 'Lutfi')).toBe('Hello Ahmad Lutfi');
+    });
 });
