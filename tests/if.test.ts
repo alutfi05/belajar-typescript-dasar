@@ -17,4 +17,21 @@ describe('If Statement', () => {
 
         console.info(say);
     });
+
+    it('should support switch statement', () => {
+        const sayHello = (name: string): string => {
+            switch (name) {
+                case 'Lutfi':
+                    return 'Hi Lutfi';
+                case 'Laila':
+                    return 'Halo Laila Sayang';
+                default:
+                    return 'Hello';
+            }
+        };
+
+        console.info(sayHello('Lutfi'));
+        console.info(sayHello('Laila'));
+        console.info(sayHello('Someone'));
+    });
 });
