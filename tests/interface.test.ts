@@ -1,4 +1,5 @@
 import { Employee, Manager } from '../src/employee';
+import { Person } from '../src/person';
 import { Seller } from '../src/seller';
 
 describe('Interface', () => {
@@ -71,11 +72,6 @@ describe('Interface', () => {
     });
 
     it('should support function in interface', () => {
-        interface Person {
-            name: string;
-            sayHello(name: string): string;
-        }
-
         const person: Person = {
             name: 'Ahmad Lutfi Rizki Patria',
             sayHello: function (name: string): string {
@@ -103,5 +99,17 @@ describe('Interface', () => {
         };
 
         console.info(domain);
+    });
+
+    it('should support type assertions', () => {
+        const person: any = {
+            name: 'Lutfi',
+            age: 22,
+        };
+
+        const person2: Person = person as Person;
+        // person2.sayHello('Laila'); // error
+
+        console.info(person2);
     });
 });
