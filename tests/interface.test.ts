@@ -85,4 +85,23 @@ describe('Interface', () => {
 
         console.info(person.sayHello('Laila Indah Agustin'));
     });
+
+    it('should support intersection types', () => {
+        interface HasName {
+            name: string;
+        }
+
+        interface HasId {
+            id: string;
+        }
+
+        type Domain = HasName & HasId;
+
+        const domain: Domain = {
+            id: '1',
+            name: 'Ahmad Lutfi Rizki Patria',
+        };
+
+        console.info(domain);
+    });
 });
